@@ -1,17 +1,24 @@
 public class Book {
-    String autor;
+    Author author;//тип данных состоящий из String firstName, String lastName
     String titleName;
     int publicationYear;
-    public  Book(String autor,String titleName, int publicationYear) {
 
-
- this.autor=autor;
- this.titleName=titleName;
- this.publicationYear=publicationYear;
-
+    public Book(Author author, String titleName, int publicationYear) {
+        this.author = author;
+        this.titleName = titleName;
+        this.publicationYear = publicationYear;
+    }
+    public void setPublicationYear(int publicationYear) {
+        this.publicationYear = publicationYear;
+    }
+public String getTitleName() {
+    return this.titleName;
+} public Author getAuthor(){
+        return this.author;
     }
 
-
-
-
+    public int getPublicationYear() {
+        return this.publicationYear;
+    }
 }
+
