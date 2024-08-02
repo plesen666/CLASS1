@@ -21,5 +21,21 @@ public class Book {
     public int getPublicationYear() {
         return this.publicationYear;
     }
+    @Override
+    //  Не понимаю эту часть кода
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Objects.equals(titleName, author) && Objects.equals(lastName, author.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return publicationYear.hash(author, titleName);
+    }
+
+}
+
 }
 
